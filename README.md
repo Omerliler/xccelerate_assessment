@@ -6,9 +6,8 @@ Data Engineer Assessment
 
 ## Installation
 ### Prerequisites
-- Python
-- Docker
-- 
+- Python 3.9
+- Docker 4.25
 
 
 ### How to download
