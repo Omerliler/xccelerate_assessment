@@ -13,8 +13,8 @@ Data Engineer Assessment
 ### How to download
 ```bash
 ## Clone the project
-git clone https://github.com/yourusername/yourproject.git
-cd yourproject
+git clone https://github.com/Omerliler/xccelerate_assessment.git
+cd xccelerate_assessment
 
 ```
 ### How to Setup
