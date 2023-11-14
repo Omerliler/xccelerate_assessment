@@ -10,6 +10,7 @@ Data Engineer Assessment
 - Docker 4.25
 
 
+
 ### How to download
 ```bash
 ## Clone the project
@@ -23,7 +24,7 @@ cd xccelerate_assessment
 docker pull postgres
 
 # Create postgresql container
-docker run --name postgresql -e "POSTGRES_USER=omerliler" -e "POSTGRES_PASSWORD=admin" -p 5432:5432 -v /data:/var/lib/postgresql/data -d postgres
+docker run --name postgresql -e "POSTGRES_USER=omerliler" -e "POSTGRES_PASSWORD=admin" -p 5432:5432 -d postgres
 
 # Pull PgAdmin to setup postgres
 docker pull dpage/pgadmin4:latest
@@ -53,7 +54,10 @@ Open the browser and go to http://localhost:82/
 python -m venv venv
 
 # Activate virtual env
-venv\Scripts\Activate 
+# Windows
+venv/Scripts/Activate 
+# MAC
+source venv/bin/activate
 
 # Install requirements
 pip install -r requirements.txt

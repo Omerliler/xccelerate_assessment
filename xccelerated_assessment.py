@@ -1,7 +1,6 @@
 import pandas as pd
 import requests
 import json
-import psycopg2
 from sqlalchemy import create_engine
 
 
@@ -126,23 +125,11 @@ def sessionize(ct_data):
 
 def insert_postgres(session_data):
 
-    # try:
-    #     connection = psycopg2.connect(
-    #         host="localhost",
-    #         database="omerliler",
-    #         user="omerliler",
-    #         password="J4nuary_23",
-    #         port="5432"
-    #     )
-    # except Exception as e:
-    #     print('\nError occured while creating connection to postgres db')
-    #     print(f'Error message: {e}')
-
     try:
         session_data = session_data[['customer_id','session_id','session_start','session_end','session_duration','order_placed']]
 
         # connection string: postgresql://username:password@localhost:5432/database_name
-        engine = create_engine('postgresql://omerliler:admin@localhost:5432/user_data')
+        engine = create_engine('postgresql://omerliler:admin@localhost:5432/omerliler')
 
         session_data.to_sql('session_data', engine, if_exists='replace', index=False)
     except Exception as e:
