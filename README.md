@@ -31,12 +31,19 @@ docker pull dpage/pgadmin4:latest
 # Create PgAdmin container
 docker run --name my-pgadmin -p 82:80 -e "PGADMIN_DEFAULT_EMAIL=omerliler@test.com" -e "PGADMIN_DEFAULT_PASSWORD=admin" -d dpage/pgadmin4
 
+# Get Network Info
+docker inspect postgresql -f "{{json .NetworkSettings.Networks }}"
 ```
 
 Open the browser and go to http://localhost:82/
 
 
-Create a server 
+### How to Create a server 
+- Login PgAdmin page by username and password 
+- Register Server 
+    - Name: Postgres
+    - IP: 172.17.0.2 (from dpcker inspect)
+    - username/password
 
 ### How to Run
 
