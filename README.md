@@ -41,8 +41,12 @@ Create a server
 ### How to Run
 
 ```bash
-## Activate virtual env
-envxcc\Scripts\Activate 
+
+# Create virtual env
+python -m venv venv
+
+# Activate virtual env
+venv\Scripts\Activate 
 
 # Install requirements
 pip install -r requirements.txt
